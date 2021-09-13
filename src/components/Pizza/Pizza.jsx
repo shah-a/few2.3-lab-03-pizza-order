@@ -1,37 +1,61 @@
 import React, { useState } from 'react'
 
 function Pizza() {
-  const [name, setName] = useState('');
-  const [toppings, setToppings] = useState(['mushrooms', 'tomatoes', 'onions', 'pineapples'])
+  const [name, setName] = useState('')
+
+  const [mushrooms, setMushrooms] = useState(false)
+  const [tomatoes, setTomatoes] = useState(false)
+  const [onions, setOnions] = useState(false)
+  const [pineapples, setPineapples] = useState(false)
 
   return (
     <div className="Pizza mx-auto mt-20">
+      <h1 className="text-4xl mb-5">Pizza Order</h1>
       <form
         className="space-y-5"
         onSubmit={(e) => {
-          e.preventDefault();
-          console.log('form submitted');
+          e.preventDefault()
+          setName('')
+          setMushrooms(false)
+          setTomatoes(false)
+          setOnions(false)
+          setPineapples(false)
         }}
       >
-        <h1 className="text-4xl">Pizza Order</h1>
         <input
           type="text"
-          placeholder="Enter your name"
+          placeholder="Your name"
           className="border rounded-lg"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+
         <div className="flex flex-col space-y-1">
-          {toppings.map((topping) => {
-            return (
-              <label key={`key-${topping}`}>
-                <input
-                  type="checkbox"
-                /> {topping}
-              </label>
-            );
-          })}
+          <label><input
+            type="checkbox"
+            checked={mushrooms}
+            onChange={() => setMushrooms(!mushrooms)}
+          /> Mushrooms</label>
+
+          <label><input
+            type="checkbox"
+            checked={tomatoes}
+            onChange={() => setTomatoes(!tomatoes)}
+          /> Tomatoes</label>
+
+          <label><input
+            type="checkbox"
+            checked={onions}
+            onChange={() => setOnions(!onions)}
+          /> Onions</label>
+
+          <label><input
+            type="checkbox"
+            checked={pineapples}
+            onChange={() => setPineapples(!pineapples)}
+          /> Pineapples</label>
         </div>
+
         <button
           type="submit"
           className="self-end"
