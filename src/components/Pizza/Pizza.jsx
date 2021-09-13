@@ -6,19 +6,35 @@ function Pizza() {
 
   return (
     <div className="Pizza mx-auto mt-20">
-      <form className="flex flex-col">
+      <form
+        className="space-y-5"
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log('form submitted');
+        }}
+      >
         <h1 className="text-4xl">Pizza Order</h1>
-        <input type="text" placeholder="Enter your name" className="border rounded-lg self-start" />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          className="border rounded-lg"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <div className="flex flex-col space-y-1">
           {toppings.map((topping) => {
             return (
               <label key={`key-${topping}`}>
-                <input type="checkbox" /> {topping}
+                <input
+                  type="checkbox"
+                /> {topping}
               </label>
             );
           })}
+        </div>
         <button
           type="submit"
-          className="self-start border px-5 py-2 rounded-lg text-white bg-green-500 hover:bg-green-600"
+          className="self-end"
         >
           Submit
         </button>
