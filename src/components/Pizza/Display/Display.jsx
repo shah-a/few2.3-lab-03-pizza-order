@@ -6,8 +6,9 @@ function Display(props) {
   } = props
 
   return (
-    <div className="Display space-y-5">
-      <h2>{name || "Your name.."}</h2>
+    <div className="Display space-y-5 text-center h-48">
+      <h2 className="text-center font-bold">Your order</h2>
+      <h2>{name}</h2>
       <div className="space-y-1">
         {mushrooms && <p>Mushrooms</p>}
         {tomatoes && <p>Tomatoes</p>}

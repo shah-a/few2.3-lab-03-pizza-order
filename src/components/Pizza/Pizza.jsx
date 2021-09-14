@@ -23,6 +23,20 @@ function Pizza() {
       <h1 className="text-center col-span-2">Pizza Order</h1>
       <Form {...props} />
       <Display {...props} />
+      <div className="col-span-2 text-center">
+        <button
+          onClick={(e) => {
+            e.preventDefault()
+            setName('')
+            setMushrooms(false)
+            setTomatoes(false)
+            setOnions(false)
+            setPineapples(false)
+          }}
+        >
+          Submit
+        </button>
+      </div>
     </div>
   )
 }

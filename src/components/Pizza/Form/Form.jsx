@@ -54,8 +54,6 @@ function Form(props) {
           onChange={() => setPineapples(!pineapples)}
         /> Pineapples</label>
       </div>
-
-      <button type="submit">Submit</button>
     </form>
   )
 }
