@@ -3,7 +3,7 @@ import Pizza from './Pizza/Pizza';
 
 function App() {
   return (
-    <div className="App min-h-screen flex flex-col">
+    <div className="App">
       <Pizza />
     </div>
   )

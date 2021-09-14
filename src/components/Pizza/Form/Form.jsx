@@ -55,12 +55,7 @@ function Form(props) {
         /> Pineapples</label>
       </div>
 
-      <button
-        type="submit"
-        className="self-end"
-      >
-        Submit
-      </button>
+      <button type="submit">Submit</button>
     </form>
   )
 }

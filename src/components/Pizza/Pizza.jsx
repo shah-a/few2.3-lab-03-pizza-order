@@ -19,8 +19,8 @@ function Pizza() {
   }
 
   return (
-    <div className="Pizza mx-auto mt-20">
-      <h1 className="text-4xl mb-5">Pizza Order</h1>
+    <div className="Pizza mx-auto mt-20 grid gap-10 grid-cols-2">
+      <h1 className="text-center col-span-2">Pizza Order</h1>
       <Form {...props} />
       <Display {...props} />
     </div>

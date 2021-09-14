@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  .App {
+    @apply min-h-screen flex flex-col text-white bg-blueGray-900;
+  }
+
+  input {
+    @apply text-blueGray-900;
+  }
+
   h1 {
     @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
   }
 }
 
 @layer components {
   button {
-    @apply border px-5 py-2 rounded-lg text-white bg-green-500 hover:bg-green-600;
+    @apply px-5 py-2 rounded-lg text-white bg-green-500 hover:bg-green-600;
   }
 }

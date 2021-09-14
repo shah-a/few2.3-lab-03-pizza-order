@@ -6,12 +6,14 @@ function Display(props) {
   } = props
 
   return (
-    <div className="Display">
-      <h1>{name}</h1>
-      {mushrooms && <p>Mushrooms</p>}
-      {tomatoes && <p>Tomatoes</p>}
-      {onions && <p>Onions</p>}
-      {pineapples && <p>Pineapples</p>}
+    <div className="Display space-y-5">
+      <h2>{name || "Your name.."}</h2>
+      <div className="space-y-1">
+        {mushrooms && <p>Mushrooms</p>}
+        {tomatoes && <p>Tomatoes</p>}
+        {onions && <p>Onions</p>}
+        {pineapples && <p>Pineapples</p>}
+      </div>
     </div>
   )
 }
